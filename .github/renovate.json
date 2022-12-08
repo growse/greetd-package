@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "config:base",
+    ":disableRateLimiting",
+    ":rebaseStalePrs",
+    ":disableDependencyDashboard"
+  ],
+  "assignees": ["growse"],
+  "regexManagers": [
+    {
+      "fileMatch": ["^GNUmakefile$"],
+      "matchStrings": [
+        "# renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)\\s.*?_VERSION := (?<currentValue>.*?)\\s"
+      ]
+    }
+  ]
+}
