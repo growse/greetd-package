@@ -15,7 +15,7 @@ DEBVERSION := $(VERSION:v%=%)-$(BUILD_NUMBER)
 APP_SRCDIR := $(DEBNAME)-$(VERSION)
 APP_CONFIGURE_SCRIPT = $(APP_SRCDIR)/Cargo.toml
 CROSS_MANIFEST = $(APP_SRCDIR)/Cross.toml
-CROSS_BIN :=  ../../cross/target/debug/cross
+CROSS_BIN :=  cross
 
 # Let's map from rust architectures to deb architectures, because they're not the same!
 RUST_arm64_ARCH := aarch64-unknown-linux-gnu
